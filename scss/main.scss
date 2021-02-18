@@ -1,0 +1,53 @@
+// variables
+$primary: #208fee;
+$secondary:#707070;
+$success: #9ab03b;
+$warning: #f19f21;
+$dark: #444444;
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+// font RB
+@font-face {
+    font-family: rb;
+    src: url("ArbFONTS-riyad-bank-Regular.woff");
+  }
+body{
+    font-family: rb;
+    color: #444444;
+    font-size: 14px;
+}  
+// navbar 
+.navbar{
+    text-align: right;
+    direction: rtl;
+}
+.user-icons{
+    order: 1;
+}
+//mobile slideing menu
+@media (max-width: 992px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        padding-left: 25px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        max-width: 75%;
+        height: 100%;
+        box-shadow: 0 21px 5px #444444;
+    }
+
+    .navbar-collapse.collapsing {
+        left: -75%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.show {
+        left: 0;
+        transition: left 300ms ease-in-out;
+    }
+
+    .navbar-toggler.collapsed ~ .navbar-collapse {
+        transition: left 500ms ease-in-out;
+    }
+}
