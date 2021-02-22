@@ -8,7 +8,7 @@ $dark: #444444;
 // font RB
 @font-face {
     font-family: rb;
-    src: url("ArbFONTS-riyad-bank-Regular.woff");
+    src: url("fonts/ArbFONTS-riyad-bank-Regular.woff");
   }
 body{
     font-family: rb;
@@ -20,14 +20,25 @@ body{
     text-align: right;
     direction: rtl;
 }
+#top-bar{
+    direction: rtl;
+}
 .user-icons{
     order: 1;
 }
+#menu-bar{
+    margin-top: -3em;
+}
+
+.dropdown-menu.show{
+    left: auto;
+}
+
 //mobile slideing menu
 @media (max-width: 992px) {
     .navbar-collapse {
         position: fixed;
-        top: 100px;
+        top: 0px;
         left: 0;
         padding-left: 25px;
         padding-right: 15px;
@@ -49,5 +60,12 @@ body{
 
     .navbar-toggler.collapsed ~ .navbar-collapse {
         transition: left 500ms ease-in-out;
+    }
+    button.navbar-toggler.icofont-close {
+        margin: 1em;
+        margin-bottom: 100px;
+        margin-right: 150px;
+        text-align: left;
+        color: $dark;
     }
 }
