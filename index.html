@@ -36,37 +36,43 @@
 </head>
 
 <body class="">
+  <div class="preloader text-center">
+    <div class="text-center">
+      <img src="images/icon.gif" alt="">
+    </div>
+  </div>
   <section id="top-bar" class="bg-dark pb-5">
-    <div class="container text-light py-4">
+    <div class="container text-light py-3">
       <div class="row align-items-center">
-        <div class="col-lg-4 col-md-12 col-12 d-none d-xl-block">
+        <div class="col-lg-4 col-6 ">
           <h6 class="text-right">مرحبا فى جمعية نماء الأهلية</h6>
         </div>
-        <div class="col-lg-8 col-md-12 col-12">
+        <div class="col-lg-8 col-6">
           <div class="row justify-content-end text-right">
-            <div class="col-1 mt-2 p-0 text-center">
+            <div class="col-2 col-md-1 mt-2 p-0 text-center">
               <i class="icofont-envelope p-2 bg-light text-dark rounded-circle icofont-lg"></i>
             </div>
             <div class="col-3 p-0 d-none d-lg-inline">
               <span class="pr-1">أرسل لنا بريدًا إلكترونيًا:</span>
               <a class="d-block text-light" href="#">namaa@namaa.sa</a>
             </div>
-            <div class="col-1 mt-2 p-0 text-center">
+            <div class="col-2 col-md-1 mt-2 p-0 text-center mx-2">
               <i class="icofont-phone p-2 bg-light text-dark rounded-circle icofont-lg"></i>
             </div>
             <div class="col-3 p-0 d-none d-lg-inline">
               <span class="pr-1">أتصل بنا:</span>
               <a class="d-block text-light" href="#">0556497472</a>
             </div>
-            <div class="col-3">
+            <!-- <div class="col-3">
               <a href="#" class="btn-light btn-sm px-lg-3 text-left p-1 d-inline-flex">
                 <i class="icofont-send-mail icofont-2x"></i> تواصل معنا</a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
     </div>
   </section>
+  <!-- top-bar end -->
   <section id="menu-bar">
     <div class="container bg-white rounded shadow-sm mainmenu-nav">
       <nav class="navbar navbar-expand-lg navbar-light">
@@ -465,7 +471,162 @@
       </nav>
     </div>
   </section>
-  <section id="slider"></section>
+  <!-- main menu end -->
+  <section id="slider">
+    <div class="owl-carousel">
+      <div class="banner">
+        <a href="#">
+          <img src="images/banner (1).jpg" alt="banner" class="img-fluid">
+          <div class="banner-text">
+            <h1 class="">زكـاتـك ... عطاء ونماء الزكاة عطاء للمحتاج ونماء للمال </h1>
+            <span>زكـاتـك ... عطاء ونماء الزكاة عطاء للمحتاج ونماء للمال وحفظ للأهل والأولاد</span>
+          </div>
+        </a>
+      </div>
+      <div class="banner">
+        <a href="#">
+          <img src="images/banner (2).jpg" alt="banner" class="img-fluid">
+          <div class="banner-text">
+            <h1 class="">زكـاتـك ... عطاء ونماء الزكاة عطاء للمحتاج ونماء للمال </h1>
+            <span>زكـاتـك ... عطاء ونماء الزكاة عطاء للمحتاج ونماء للمال وحفظ للأهل والأولاد</span>
+          </div>
+        </a>
+      </div>
+      <div class="banner">
+        <a href="#">
+          <img src="images/banner (3).jpg" alt="banner" class="img-fluid">
+          <div class="banner-text">
+            <h1 class="">زكـاتـك ... عطاء ونماء الزكاة عطاء للمحتاج ونماء للمال </h1>
+            <span>زكـاتـك ... عطاء ونماء الزكاة عطاء للمحتاج ونماء للمال وحفظ للأهل والأولاد</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="quick-donation">
+      <div class="slide-icon">
+        <div class="slide-arrow"><i class="icofont-curved-left icofont-lg"></i></div>
+        <div class="slide-button fade show"><i class="icofont-clock-time icofont-lg d-block"></i><span>تبرع سريع</span></div>
+      </div>
+      <div class="tabber">
+        <ul class="nav nav-tabs text-right" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#tab1"> كفالات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#tab2">صدقة</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#tab3">حالات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#tab4">مشاريع</a>
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content text-center">
+          <div id="tab1" class="container tab-pane active"><br>
+            <form>
+              <div class="row">
+                <div class="col px-0">
+                  <select class=" form-control form-control-sm" name="projects" id="projects">
+                    <option value="كفالات أيتام">كفالات أيتام</option>
+                    <option value="زكـاتـك نماء">زكـاتـك نماء</option>
+                    <option value="سقيا الحرم">سقيا الحرم</option>
+                  </select>
+                </div>
+                <div class="col-3 px-1">
+                  <input type="text" class="form-control form-control-sm" placeholder="المبلغ">
+                </div>
+              </div>
+              <div class="row mt-3 card-footer py-2">
+                <div class="col"><button type="submit" class="btn btn-success btn-sm  text-light"><i class="icofont-cart"></i>اضف للسلة</button></div>
+                <div class="col"><button type="submit" class="btn btn-primary btn-sm"><i class="icofont-cart"></i> تبرع الآن</button></div>
+              </div>
+            </form>
+          </div>
+          <div id="tab2" class="container tab-pane fade"><br>
+            <form action="form-inline">
+              <div class="form-group">
+                <select class="custom-select form-control-sm" name="projects" id="projects">
+                  <option value="صدقة">صدقة</option>
+                  <option value="2صدقة">2صدقة</option>
+                  <option value="صدقة3">صدقة3</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control form-control-sm" name="price" id="price" aria-describedby="helpId" placeholder="المبلغ">
+              </div>
+              <div class="row mt-3 card-footer py-2">
+                <div class="col"><button type="submit" class="btn btn-success btn-sm  text-light"><i class="icofont-cart"></i>اضف للسلة</button></div>
+                <div class="col"><button type="submit" class="btn btn-primary btn-sm"><i class="icofont-cart"></i> تبرع الآن</button></div>
+              </div>
+            </form>
+          </div>
+          <div id="tab3" class="container tab-pane fade"><br>
+            <form>
+              <div class="row">
+                <div class="col pl-1">
+                  <select class="custom-select form-control-sm" name="projects" id="projects">
+                    <option value="كفالات أيتام">كفالات أيتام</option>
+                    <option value="زكـاتـك نماء">زكـاتـك نماء</option>
+                    <option value="سقيا الحرم">سقيا الحرم</option>
+                  </select>
+                </div>
+                <div class="col-3 px-0">
+                  <input type="text" class="form-control form-control-sm" placeholder="المبلغ">
+                </div>
+              </div>
+              <div class="row mt-3 card-footer py-2">
+                <div class="col"><button type="submit" class="btn btn-success btn-sm  text-light"><i class="icofont-cart"></i>اضف للسلة</button></div>
+                <div class="col"><button type="submit" class="btn btn-primary btn-sm"><i class="icofont-cart"></i> تبرع الآن</button></div>
+              </div>
+            </form>
+          </div>
+          <div id="tab4" class="container tab-pane fade text-dark"><br>
+            <h3>Menu 2</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            <div class="row mt-3 card-footer py-2">
+              <div class="col"><button type="submit" class="btn btn-success btn-sm  text-light"><i class="icofont-cart"></i>اضف للسلة</button></div>
+              <div class="col"><button type="submit" class="btn btn-primary btn-sm"><i class="icofont-cart"></i> تبرع الآن</button></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="news-ticker text-right">
+      <div class="container">
+        <div class="main">
+          <div class="row">
+            <span class="px-4 d-none d-lg-inline"><i class="icofont-earth "></i> أخبار الجمعية </span>
+            <div class="slider">
+              <div class="" style="display: none;">
+                <a href="#">
+                  <span>خلال جائحة كورونا.. جمعية “نماء” تقدم سقيا الماء لـ 874 أسرة</span>
+                </a>
+              </div>
+              <div class="Active" style="display: block;">
+                <a href="#">
+                  <span>تحت شعار “حتى لا يتوقف العطاء" “نماء” تفعل خدماتها للحالات الطارئة بنظام العمل عن بعد</span>
+                </a>
+              </div>
+              <div class="" style="display: none;">
+                <a href="#">
+                  <span>الحملة تحظى بدعم وتوجيه أمير منطقة مكة المكرمة “نماء” تساهم ببرنامج السلال الغذائية في حملة "بِرّاً بمكة"</span>
+                </a>
+              </div>
+              <div class="" style="display: none;">
+                <a href="#">
+                  <span>متابعه أعمال حملة التطعيم ضد شلل الأطفال بالقرين</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- slider end -->
   <section id="projects"></section>
   <section id="categories"></section>
   <section id="media"></section>
@@ -476,6 +637,7 @@
   <!-- JS assets -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
