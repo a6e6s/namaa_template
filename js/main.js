@@ -7,7 +7,7 @@ $(window).on("load", function () {
 
 $("document").ready(function () {
   // owl main slider
-  $(".owl-carousel").owlCarousel({
+  $("#slider .owl-carousel").owlCarousel({
     items: 1,
     rtl: true,
     nav: true,
@@ -18,12 +18,33 @@ $("document").ready(function () {
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
   });
+  $(".projects .owl-carousel").owlCarousel({
+    margin: 20,
+    // loop: true,
+    rtl: true,
+    responsiveClass: true,
+    autoplay: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true,
+      },
+      700: {
+        items: 2,
+        nav: true,
+      },
+      1000: {
+        items: 3,
+        nav: true,
+      },
+    },
+  });
 });
-
+// quick donation
 $(".quick-donation .slide-icon").on("click", function () {
   $(this).parent(".quick-donation").toggleClass("show");
 });
-//   Autoslider NEWS
+//   news ticker
 var check = $(".slider .Active");
 if (check != null) {
   (function autoslider() {
@@ -47,3 +68,7 @@ if (check != null) {
     });
   })();
 }
+// popper tooltip
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
