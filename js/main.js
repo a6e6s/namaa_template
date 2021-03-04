@@ -18,16 +18,19 @@ $("document").ready(function () {
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
   });
-  $(".projects .owl-carousel").owlCarousel({
+  //projects first row
+  $(
+    ".projects1 .owl-carousel, .projects2 .owl-carousel, .projects3 .owl-carousel, .projects4 .owl-carousel, .projects5 .owl-carousel"
+  ).owlCarousel({
     margin: 20,
-    // loop: true,
+    loop: true,
     rtl: true,
     responsiveClass: true,
     autoplay: true,
     responsive: {
       0: {
         items: 1,
-        nav: true,
+        nav: false,
       },
       700: {
         items: 2,
@@ -39,6 +42,33 @@ $("document").ready(function () {
       },
     },
   });
+  //category slider
+  $("#categories .owl-carousel").owlCarousel({
+    items: 1,
+    rtl: true,
+    nav: true,
+    loop: true,
+    dots: false,
+    margin:0,
+    responsive: {
+        0: {
+          items: 1,
+          nav: false,
+        },
+        700: {
+          items: 2,
+          nav: true,
+        },
+        1000: {
+          items: 4,
+          nav: true,
+        },
+      },
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+  });
+  //end document lood
 });
 // quick donation
 $(".quick-donation .slide-icon").on("click", function () {
