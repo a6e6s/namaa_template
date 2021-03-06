@@ -102,3 +102,5 @@ if (check != null) {
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
+//wow animate
+new WOW().init();

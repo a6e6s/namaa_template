@@ -5,6 +5,7 @@ $success: #9ab03b;
 $warning: #f19f21;
 $dark: #444444;
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/wow.js/css/libs/animate.scss";
 @import "owl.carousel.scss";
 @import "owl.theme.default.scss";
 // font RB
@@ -23,6 +24,12 @@ body {
 }
 .ltr {
   direction: ltr;
+}
+a:hover {
+  text-decoration: none;
+}
+.bg-battern{
+  background: url(../images/bg-battern.png);
 }
 // preloader
 .compleate {
@@ -44,15 +51,13 @@ body {
   top: 40%;
 }
 
-a:hover {
-  text-decoration: none;
-}
 // navbar
 .navbar {
   text-align: right;
   direction: rtl;
 }
 #top-bar {
+  background: url(../images/bg-battern.png) no-repeat $dark;
   direction: rtl;
 }
 .user-icons {
@@ -233,7 +238,7 @@ a:hover {
   color: #555;
   font-size: 6em;
 }
-#slider .owl-carousel .owl-nav .owl-prev{
+#slider .owl-carousel .owl-nav .owl-prev {
   right: 5% !important;
 }
 #slider .owl-carousel .owl-nav .owl-next {
@@ -334,18 +339,17 @@ a:hover {
     margin-top: -25px;
   }
 }
-#projects .projects1{
+#projects .projects1 {
   background-color: #208fee1a;
 }
-#projects .projects3{
+#projects .projects3 {
   background-color: #76da191a;
 }
 #projects .project {
   box-shadow: 0px 3px 10px -5px rgba(0, 0, 0, 0.4);
   border-radius: 0 0 5px 5px;
 }
-.projects-header{
-
+.projects-header {
   padding: 2em 0 2em 0;
 }
 #projects .projects-title {
@@ -353,7 +357,6 @@ a:hover {
   text-align: right;
   border-radius: 5px;
   margin-bottom: 1em;
-  
 }
 #projects .project-details {
   background-color: $light;
@@ -411,16 +414,18 @@ a:hover {
   height: 35px;
   text-align: center;
 }
-.project .btn-actions input,.project .btn-actions a,.project .btn-actions button{
-  margin: .25em;
+.project .btn-actions input,
+.project .btn-actions a,
+.project .btn-actions button {
+  margin: 0.25em;
   padding: 9px 0px;
-  font-size: .8em;
+  font-size: 0.8em;
   color: $light;
   border: 0;
   text-align: center;
 }
-.tooltip.bs-tooltip-top{
-  opacity: .7;
+.tooltip.bs-tooltip-top {
+  opacity: 0.7;
 }
 
 #categories .owl-carousel .owl-nav .owl-next,
@@ -435,13 +440,15 @@ a:hover {
   font-size: 4em;
   font-weight: lighter;
 }
-#categories .owl-carousel .owl-prev:hover, #categories .owl-carousel .owl-next:hover,
-#projects .owl-carousel .owl-prev:hover, #projects .owl-carousel .owl-next:hover  {
+#categories .owl-carousel .owl-prev:hover,
+#categories .owl-carousel .owl-next:hover,
+#projects .owl-carousel .owl-prev:hover,
+#projects .owl-carousel .owl-next:hover {
   opacity: 0.9;
-  background: transparent ;
+  background: transparent;
 }
 #categories .owl-carousel .owl-nav .owl-prev,
-#projects .owl-carousel .owl-nav .owl-prev{
+#projects .owl-carousel .owl-nav .owl-prev {
   right: -5% !important;
 }
 #categories .owl-carousel .owl-nav .owl-next,
@@ -449,22 +456,22 @@ a:hover {
   left: -5% !important;
 }
 // categories
-#categories .project-category{
+#categories .project-category {
   z-index: 3;
-  padding: .6em;
-  font-size: .9em;
+  padding: 0.6em;
+  font-size: 0.9em;
 }
-#categories .project-category .category-container{
+#categories .project-category .category-container {
   box-shadow: 0px 1px 3px 0px #70707082;
   border-radius: 5px;
 }
-#categories .project-category:hover .category-container{
+#categories .project-category:hover .category-container {
   box-shadow: 0px 1px 10px 1px #70707082;
 }
-#categories .project-category .category-container:hover::before{
+#categories .project-category .category-container:hover::before {
   opacity: 1;
 }
-#categories .project-category .category-container::before{
+#categories .project-category .category-container::before {
   background: url(../images/box-shape2.png) top left no-repeat;
   content: "";
   position: absolute;
@@ -475,38 +482,69 @@ a:hover {
   opacity: 0.5;
   z-index: -1;
 }
-.category-btn{
-  font-size: .9em;
+.category-btn {
+  font-size: 0.9em;
   // border-color: #ddd;
   font-weight: lighter;
 }
-
-/*================================================
-Footer Area CSS
-=================================================*/
-.footer-area {
-  background-color: #444444;
-  text-align: right;
+//media
+#media .news:hover {
+  box-shadow: 0px 1px 10px 1px #70707082;
 }
-
-.footer-area::before {
-  content: '';
+#media .news {
+  box-shadow: 0 0.125rem 0.25rem #00000022;
+}
+#media .main-news-content{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40% 2em 0 2em;
   position: absolute;
+  z-index: 1;
+  top: 0%;
+  bottom: 0;
+  right: 0;
   left: 0;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/bg-line-min.png);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
-#footer .subscribe-form .email, #footer .subscribe-form button{
+#media .main-news-img:hover .main-news-content{
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+//video
+#video {
+
+}
+.video-content{
+  // background: url(../images/box-shape2.png) top left no-repeat;
+
+}
+.video-discription{
+  
+}
+
+// Footer Area CSS
+.footer-area {
+  text-align: right;
+  background-color: $dark;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top: 2px solid $success;
+}
+.footer-area a {
+  color: $success;
+}
+.footer-area a:hover i {
+  color: $success;
+}
+#footer .subscribe-form .email,
+#footer .subscribe-form button {
   font-size: 1em;
   // line-height: 3em;
 }
-#footer .subscribe-form button{
+#footer .subscribe-form button {
   width: 100px;
   margin-right: -100px;
 }
